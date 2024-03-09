@@ -17,5 +17,20 @@ public abstract class Person {
 
 	public abstract void Print();
 
+
+	public String getName() {
+		return Name;
+	}
+
+
+	public int getAge() {
+		return Age;
+	}
+
+
+	public char getGender() {
+		return Gender;
+	}
+
 	
 }
