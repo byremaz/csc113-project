@@ -75,7 +75,7 @@ public class Gym {
 		int j=0;
 		for(int i=0; i<numOfEquipment; i++) 
 			if(eList[i].getName().equalsIgnoreCase(name))
-			eName[j++]=new Equipment(eList[i].getName(),eList[i].getType(),eList[i].getQuantity());
+			eName[j++]=eList[i];
 		
 		if(j==0)
 			return null;
@@ -90,7 +90,7 @@ public class Gym {
 		int j=0;
 		for(int i=0; i<numOfEquipment; i++) 
 			if(eList[i].getType().equalsIgnoreCase(type))
-			eType[j++]=new Equipment(eList[i].getName(),eList[i].getType(),eList[i].getQuantity());
+			eType[j++]=eList[i];
 		
 		if(j==0)
 			return null;
