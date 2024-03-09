@@ -22,6 +22,14 @@ public class Trainer extends Person{
 		System.out.println("Trainer Experience: "+ ExperienceYears);
 		
 	}
+
+	public int getTrainerID() {
+		return TrainerID;
+	}
+
+	public int getExperienceYears() {
+		return ExperienceYears;
+	}
 	
 
 }
