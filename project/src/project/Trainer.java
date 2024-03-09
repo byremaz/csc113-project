@@ -27,7 +27,7 @@ public class Trainer extends Person{
 		if(ExperienceYears == 2) 
 		return 6500 ; 
 		else 
-			if(ExperienceYears == 2)
+			if(ExperienceYears == 3)
 			return 7000 ; 
 			else
 		if(ExperienceYears == 4)
