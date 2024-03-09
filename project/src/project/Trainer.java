@@ -5,12 +5,12 @@ public class Trainer extends Person{
 	
 	private int TrainerID ;
 	private int ExperienceYears ;
-	
 
 	public Trainer(String name, int age, char gender, int trainerID, int experience) {
 		super(name, age, gender);
 		TrainerID = trainerID;
 		ExperienceYears = experience;
+		
 	}
 
 	public void Print() {
@@ -22,7 +22,24 @@ public class Trainer extends Person{
 		System.out.println("Trainer Experience: "+ ExperienceYears);
 		
 	}
+	
+	public double calculateSalary() {
+		if(ExperienceYears == 2) 
+		return 6500 ; 
+		else 
+			if(ExperienceYears == 2)
+			return 7000 ; 
+			else
+		if(ExperienceYears == 4)
+			return 7500 ; 
+		else
+			if(ExperienceYears >=5 )
+				return 8000 ; 
+			else 
+				return 0 ; 
 
+
+} 
 	public int getTrainerID() {
 		return TrainerID;
 	}
