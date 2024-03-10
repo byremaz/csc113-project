@@ -6,12 +6,14 @@ public abstract class Person {
 	protected String Name ;
 	protected int Age ;
 	protected char Gender ;
+	protected int ID ;
 	
 	
-	public Person(String name, int age, char gender) {
+	public Person(String name, int age, char gender, int id) {
 		Name = name;
 		Age = age;
 		Gender = gender;
+		ID = id ;
 	}
 
 
@@ -30,6 +32,11 @@ public abstract class Person {
 
 	public char getGender() {
 		return Gender;
+	}
+
+
+	public int getID() {
+		return ID;
 	}
 
 	
