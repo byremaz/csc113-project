@@ -108,7 +108,7 @@ public class Gym {
 		
 		if(numOfEmployee<empList.length) {
 		if(emp.getGender()=='F' && emp.getAge()>=21)
-		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), ((Employee)emp).getworkinHoures(), emp.getID());
+		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), emp.getworkinHoures(), emp.getID());
 		return true;
 		}
 		return false; 
