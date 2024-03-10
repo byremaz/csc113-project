@@ -144,7 +144,7 @@ public class Gym {
 		  System.out.println("--------------Gym's information---------------"); 
 		  System.out.println("Gym Name: " + name + "\nLocation: "+ location + "\nNumber of Employees: "+ numOfEmployee +"\nNumber of Members: "+getNumOfMembers()+"\nNumber of Trainers: "+ getNumOfTrainers() );
 		  //display employees INFO
-		  System.out.println("-----Members INFO-------");
+		  System.out.println("-----Employees INFO-------");
 		  for(int i=0 ; i< numOfEmployee ; i++)
 		    empList[i].Print() ;
 		  //display members INFO
