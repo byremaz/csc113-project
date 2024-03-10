@@ -3,8 +3,8 @@ package project;
 	public class Employee extends Person {
 	private int workingHours ; 
 
-	public Employee(String name, int age, char gender , int hours) {
-			super( name, age,  gender) ;
+	public Employee(String name, int age, char gender , int hours , int id) {
+			super( name, age,  gender, id) ;
 			workingHours = hours; 
 			
 	}
@@ -13,7 +13,7 @@ package project;
 
 
 	}
-	public void Print() {
+	public void Print()  {
 		
 		System.out.println("Member Name: "+ Name);
 		System.out.println("Member Age: "+ Age);
