@@ -139,41 +139,28 @@ public class Gym {
 		return num ;
 	}
 	
-	public void Display() {
-		
-		System.out.println("--------------Gym's information---------------"); 
-		System.out.println("Gym Name: " + name + " Location: "+ location +" Number of Members: "+getNumOfMembers()+" Number of Trainers: "+ getNumOfTrainers() );
-		//display members info
-		System.out.println("-----Members INFO-------");
-		for(int i=0 ; i< numOfPeople ; i++)
-			if ( pList[i] instanceof Member )
-				pList[i].Print() ;
-		//display Trainers INFO
-		System.out.println("-----Trainers INFO-------");
-		for(int i=0 ; i< numOfPeople ; i++)
-			if ( pList[i] instanceof Trainer )
-				pList[i].Print() ;
-		//display Equipments info 
-		System.out.println("-----Equipments INFO-------");
-		for(int i=0 ; i< numOfEquipment ; i++)
-			System.out.print(eList[i]);
+	 public void Display() {
+		  
+		  System.out.println("--------------Gym's information---------------"); 
+		  System.out.println("Gym Name: " + name + "\nLocation: "+ location + "\nNumber of Employees: "+ numOfEmployee +"\nNumber of Members: "+getNumOfMembers()+"\nNumber of Trainers: "+ getNumOfTrainers() );
+		  //display employees INFO
+		  System.out.println("-----Members INFO-------");
+		  for(int i=0 ; i< numOfEmployee ; i++)
+		    empList[i].Print() ;
+		  //display members INFO
+		  System.out.println("-----Members INFO-------");
+		  for(int i=0 ; i< numOfPeople ; i++)
+		   if ( pList[i] instanceof Member )
+		    pList[i].Print() ;
+		  //display Trainers INFO
+		  System.out.println("-----Trainers INFO-------");
+		  for(int i=0 ; i< numOfPeople ; i++)
+		   if ( pList[i] instanceof Trainer )
+		    pList[i].Print() ;
+		  //display Equipments INFO 
+		  System.out.println("-----Equipments INFO-------");
+		  for(int i=0 ; i< numOfEquipment ; i++)
+		   System.out.print(eqList[i]);
 
-			}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		   }
 }
