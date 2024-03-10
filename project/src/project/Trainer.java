@@ -3,12 +3,10 @@ package project;
 public class Trainer extends Person{
 
 	
-	private int TrainerID ;
 	private int ExperienceYears ;
 
-	public Trainer(String name, int age, char gender, int trainerID, int experience) {
-		super(name, age, gender);
-		TrainerID = trainerID;
+	public Trainer(String name, int age, char gender,int id, int trainerID, int experience) {
+		super(name, age, gender,id);
 		ExperienceYears = experience;
 		
 	}
@@ -18,7 +16,7 @@ public class Trainer extends Person{
 		System.out.println("Trainer Name: "+ Name);
 		System.out.println("Trainer Age: "+ Age);
 		System.out.println("Trainer Gender: "+ Gender);
-		System.out.println("Trainer ID: "+ TrainerID);
+		System.out.println("Trainer ID: "+ ID);
 		System.out.println("Trainer Experience: "+ ExperienceYears);
 		
 	}
@@ -40,9 +38,7 @@ public class Trainer extends Person{
 
 
 } 
-	public int getTrainerID() {
-		return TrainerID;
-	}
+
 
 	public int getExperienceYears() {
 		return ExperienceYears;
