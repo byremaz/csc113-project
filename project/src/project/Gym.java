@@ -30,10 +30,10 @@ public class Gym {
 	
 			if(p instanceof Member) {
 				if(p.getGender()=='F' && p.getAge()>=16)
-				pList[numOfPeople++]=new Member(p.getName(), p.getAge(), p.getGender(), ((Member)p).getMemberID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());}
+				pList[numOfPeople++]=new Member(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());}
 			else if(p instanceof Trainer) {
 				if(p.getGender()=='F' && p.getAge()>=23)
-				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), ((Trainer)p).getTrainerID(), ((Trainer)p).getExperienceYears()); }
+				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears()); }
 				return true;
 	}
 	return false; 
@@ -42,10 +42,8 @@ public class Gym {
 	
 	public int searchPerson(int id){
 		for(int i=0 ; i<numOfPeople ; i++){
-		    if(((Member)pList[i]).getMemberID()==id)
-		    	return i ;
-		    else if(((Trainer)pList[i]).getTrainerID()==id)
-		    	return i ;
+		    if(pList[i].getID()==id)		 
+		    return i ;
 		}
 		return -1 ; 
 	}
@@ -110,7 +108,7 @@ public class Gym {
 		
 		if(numOfEmployee<empList.length) {
 		if(emp.getGender()=='F' && emp.getAge()>=21)
-		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), ((Employee)emp).getworkinHoures());
+		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), emp.getID(),((Employee)emp).getworkinHoures());
 		return true;
 		}
 		return false; 
