@@ -108,11 +108,33 @@ public class Gym {
 		
 		if(numOfEmployee<empList.length) {
 		if(emp.getGender()=='F' && emp.getAge()>=21)
-		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), emp.getID(),((Employee)emp).getworkinHoures());
+		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), ((Employee)emp).getworkinHoures(), emp.getID());
 		return true;
 		}
 		return false; 
 		}
+
+	
+	public int searchEmployee(int id){
+		for(int i=0;i<numOfEmployee;i++){
+		    if(empList[i].getID()==id)
+		return i ;
+		}
+		return -1 ;
+	}
+	
+	
+	public boolean removeEmployee(int id) {
+		int loc=searchEmployee(id);
+	    if(loc<numOfEmployee && loc>=0){
+	       for(int i=loc;i<numOfEmployee-1;i++) 
+	       empList[i]=empList[i+1];
+	    
+	       empList[--numOfEmployee]=null;
+	       return true;
+	    }
+           return false;
+	}
 
 	
 	public int getNumOfMembers() {
