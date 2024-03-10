@@ -1,21 +1,26 @@
 package project;
 
 public class Gym {
-
-	private String name;
+	
+        private String name;
 	private String location;
 	private Person [] pList;
-	private Equipment [] eList;
+	private Equipments [] eqList;
+	private Employee [] empList;
 	private int numOfPeople;
 	private int numOfEquipment;
+	private int numOfEmployee;
+
 	
-	public Gym(String name, String location, int maxPeople , int maxEquipment ) {
+	public Gym(String name, String location, int maxPeople , int maxEquipment , int maxEmployee) {
 		this.name = name;
 		this.location = location;
 		pList=new Person[maxPeople];
-		eList=new Equipment[maxEquipment];
+		eqList=new Equipments[maxEquipment];
+		empList=new Employee[maxEmployee];
 		numOfPeople=0;
 		numOfEquipment=0;
+		numOfEmployee=0;
 	}
 	
 	
@@ -23,10 +28,12 @@ public class Gym {
 	
 	if(numOfPeople<pList.length) {
 	
-			if(p instanceof Member)
-				pList[numOfPeople++]=new Member(p.getName(), p.getAge(), p.getGender(), ((Member)p).getMemberID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());
-			else if(p instanceof Trainer)
-				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), ((Trainer)p).getTrainerID(), ((Trainer)p).getExperienceYears()); 
+			if(p instanceof Member) {
+				if(p.getGender()=='F' && p.getAge()>=16)
+				pList[numOfPeople++]=new Member(p.getName(), p.getAge(), p.getGender(), ((Member)p).getMemberID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());}
+			else if(p instanceof Trainer) {
+				if(p.getGender()=='F' && p.getAge()>=23)
+				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), ((Trainer)p).getTrainerID(), ((Trainer)p).getExperienceYears()); }
 				return true;
 	}
 	return false; 
@@ -40,7 +47,7 @@ public class Gym {
 		    else if(((Trainer)pList[i]).getTrainerID()==id)
 		    	return i ;
 		}
-		return -1 ;
+		return -1 ; 
 	}
 
 	
@@ -59,9 +66,9 @@ public class Gym {
 	
 	
 	
-	public boolean addEquipment(Equipment e) {
-		if(numOfEquipment<eList.length) {
-			eList[numOfEquipment++]=e;
+	public boolean addEquipment(Equipment eq) {
+		if(numOfEquipment<eqList.length) {
+			eqList[numOfEquipment++]=eq;
 		return true;
 		}
 		return false;
@@ -71,33 +78,45 @@ public class Gym {
 	
 	public Equipment[] searchEquipmentByName (String name) {
 		
-		Equipment[] eName=new Equipment[numOfEquipment];
+		Equipment[] eqName=new Equipment[numOfEquipment];
 		int j=0;
 		for(int i=0; i<numOfEquipment; i++) 
-			if(eList[i].getName().equalsIgnoreCase(name))
-			eName[j++]=eList[i];
+			if(eqList[i].getName().equalsIgnoreCase(name))
+			eqName[j++]=eqList[i];
 		
 		if(j==0)
 			return null;
 		else 
-			return eName;
+			return eqName;
 	}
 	
 	
 	
 	public Equipment[] searchEquipmentByType (String type) {
-		Equipment[] eType=new Equipment[numOfEquipment];
+		Equipment[] eqType=new Equipment[numOfEquipment];
 		int j=0;
 		for(int i=0; i<numOfEquipment; i++) 
-			if(eList[i].getType().equalsIgnoreCase(type))
-			eType[j++]=eList[i];
+			if(eqList[i].getType().equalsIgnoreCase(type))
+			eqType[j++]=eqList[i];
 		
 		if(j==0)
 			return null;
 		else 
-			return eType;
+			return eqType;
 	}
 
+
+	public boolean addEmployee (Employee emp) {
+		
+		if(numOfEmployee<empList.length) {
+		if(emp.getGender()=='F' && emp.getAge()>=21)
+		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), ((Employee)emp).getworkinHoures());
+		return true;
+		}
+		return false; 
+		}
+
+	
 	public int getNumOfMembers() {
 		int num = 0 ;
 		
