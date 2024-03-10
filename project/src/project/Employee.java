@@ -1,15 +1,15 @@
 package project;
 
 	public class Employee extends Person {
-	private int workingHours ; 
+	private int workHours ; 
 
 	public Employee(String name, int age, char gender , int hours , int id) {
 			super( name, age,  gender, id) ;
-			workingHours = hours; 
+			workHours = hours; 
 			
 	}
 	public double calculateSalary() { 
-		return workingHours*600 ; 
+		return workHours*600 ; 
 
 
 	}
@@ -18,11 +18,11 @@ package project;
 		System.out.println("Member Name: "+ Name);
 		System.out.println("Member Age: "+ Age);
 		System.out.println("Member Gender: "+ Gender);
-		System.out.println("Working Hours: "+ workingHours);
+		System.out.println("Working Hours: "+ workHours);
 	}
-	public int getworkinHoures() 
+	public int getworkHours() 
 	{
-		return workingHours ; 
+		return workHours ; 
 	}
 	
 	}
