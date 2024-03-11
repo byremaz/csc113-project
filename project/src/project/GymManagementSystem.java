@@ -55,7 +55,7 @@ public class GymManagementSystem {
 					System.out.println("Member is Successfully removed");
 				else
 					System.out.println("Failed to remove Member, No member with "+Id+" ID");
-				System.out.println("---------------------------------");
+				System.out.println("----------------------------------------");
 				break ;
 
 			
