@@ -54,7 +54,7 @@ public class GymManagementSystem {
 				if ( FitnessTime.removePerson(Id) )
 					System.out.println("Member is Successfully removed");
 				else
-					System.out.println("Failed to remove Member, Please check member information.");
+					System.out.println("Failed to remove Member, No member with "+Id+" ID");
 				System.out.println("---------------------------------");
 				break ;
 
