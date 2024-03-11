@@ -27,7 +27,7 @@ public class GymManagementSystem {
 			case 1: 
 				System.out.println("------------ Add member ------------");
 				System.out.println("**Members must be females with an age of 16 or more**");
-				System.out.print("Please Enter member Name: ");
+				System.out.print("Enter member Name: ");
 				String name = input.next() ;
 				System.out.print("Enter member Age: ");
 				int age = input.nextInt();
@@ -49,7 +49,7 @@ public class GymManagementSystem {
 				break ;
 			case 2:
 				System.out.println("------------ Remove member ------------");
-				System.out.print("Please Enter member ID: ");
+				System.out.print("Enter member ID: ");
 				int Id = input.nextInt();
 				if ( FitnessTime.removePerson(Id) )
 					System.out.println("Member is Successfully removed");
