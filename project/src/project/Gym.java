@@ -8,7 +8,6 @@ public class Gym {
 	private Equipment [] eqList;
 	private int numOfPeople;
 	private int numOfEquipment;
-	private int numOfEmployee;
 
 	
 	public Gym(String name, String location, int maxPeople , int maxEquipment) {
