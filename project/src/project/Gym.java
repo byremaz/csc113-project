@@ -5,7 +5,7 @@ public class Gym {
         private String name;
 	private String location;
 	private Person [] pList;
-	private Equipments [] eqList;
+	private Equipment [] eqList;
 	private Employee [] empList;
 	private int numOfPeople;
 	private int numOfEquipment;
@@ -16,7 +16,7 @@ public class Gym {
 		this.name = name;
 		this.location = location;
 		pList=new Person[maxPeople];
-		eqList=new Equipments[maxEquipment];
+		eqList=new Equipment[maxEquipment];
 		empList=new Employee[maxEmployee];
 		numOfPeople=0;
 		numOfEquipment=0;
