@@ -5,7 +5,7 @@ public class Trainer extends Person{
 	
 	private int ExperienceYears ;
 
-	public Trainer(String name, int age, char gender,int id, int trainerID, int experience) {
+	public Trainer(String name, int age, char gender,int id, int experience) {
 		super(name, age, gender,id);
 		ExperienceYears = experience;
 		
