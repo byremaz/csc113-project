@@ -33,7 +33,7 @@ public class Gym {
 				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears()); }
 		else if(p instanceof Employee) {
 				if(p.getGender()=='F' && p.getAge()>=21)
-				pList[numOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkinHoures(), p.getID()); }
+				pList[numOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkHours(), p.getID()); }
 				return true;
 	}
 	return false; 
@@ -104,13 +104,36 @@ public class Gym {
 	}
 
 	
-	public int searchEmployee(int id){
-		for(int i=0;i<numOfEmployee;i++){
-		    if(empList[i].getID()==id)
-		return i ;
-		}
-		return -1 ;
+	public Person[] getEmployees(){
+		Person [] empList=new Person[numOfPeople];
+		int j=0;
+		for(int i=0;i<numOfPeople;i++)
+		    if(pList[i] instanceof Employee)
+		    	empList[j++]=new Employee(pList[i].getName(), pList[i].getAge(), pList[i].getGender(), ((Employee)pList[i]).getworkHours(), pList[i].getID());
+		
+		return empList;
 	}
+	
+	public Person[] getMembers(){
+		Person [] mList=new Person[numOfPeople];
+		int j=0;
+		for(int i=0;i<numOfPeople;i++)
+		    if(pList[i] instanceof Member)
+		    	mList[j++]=new Member(pList[i].getName(), pList[i].getAge(), pList[i].getGender(), pList[i].getID(), ((Member)pList[i]).getMembershipType(), ((Member)pList[i]).getGoal());
+		
+		return mList;
+	}
+
+	public Person[] getTrainers(){
+		Person [] tList=new Person[numOfPeople];
+		int j=0;
+		for(int i=0;i<numOfPeople;i++)
+		    if(pList[i] instanceof Trainer)
+		    	tList[j++]=new Trainer(pList[i].getName(), pList[i].getAge(), pList[i].getGender(), pList[i].getID(), ((Trainer)pList[i]).getExperienceYears());
+		
+		return tList;
+	}
+
 	
 
 	
