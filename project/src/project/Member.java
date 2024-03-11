@@ -5,7 +5,7 @@ public class Member extends Person {
 	private char MembershipType ;
 	private String Goal ;
 
-	public Member(String name, int age, char gender, int id, int memberID, char membershipType, String goal) {
+	public Member(String name, int age, char gender, int id, char membershipType, String goal) {
 		super(name, age, gender, id);
 		MembershipType = membershipType;
 		Goal = goal;
