@@ -26,7 +26,7 @@ public class GymManagementSystem {
 			
 			case 1: 
 				System.out.println("------------ Add member ------------");
-				System.out.println("**Members must be females with an age of 16 or more**");
+				System.out.println("**Membership is restricted to females aged 16 years and older**");
 				System.out.print("Enter member Name: ");
 				String name = input.next() ;
 				System.out.print("Enter member Age: ");
