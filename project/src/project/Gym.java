@@ -6,21 +6,18 @@ public class Gym {
 	private String location;
 	private Person [] pList;
 	private Equipment [] eqList;
-	private Employee [] empList;
 	private int numOfPeople;
 	private int numOfEquipment;
 	private int numOfEmployee;
 
 	
-	public Gym(String name, String location, int maxPeople , int maxEquipment , int maxEmployee) {
+	public Gym(String name, String location, int maxPeople , int maxEquipment) {
 		this.name = name;
 		this.location = location;
 		pList=new Person[maxPeople];
 		eqList=new Equipment[maxEquipment];
-		empList=new Employee[maxEmployee];
 		numOfPeople=0;
 		numOfEquipment=0;
-		numOfEmployee=0;
 	}
 	
 	
@@ -34,6 +31,9 @@ public class Gym {
 			else if(p instanceof Trainer) {
 				if(p.getGender()=='F' && p.getAge()>=23)
 				pList[numOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears()); }
+		else if(p instanceof Employee) {
+				if(p.getGender()=='F' && p.getAge()>=21)
+				pList[numOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkinHoures(), p.getID()); }
 				return true;
 	}
 	return false; 
@@ -103,17 +103,6 @@ public class Gym {
 			return eqType;
 	}
 
-
-	public boolean addEmployee (Employee emp) {
-		
-		if(numOfEmployee<empList.length) {
-		if(emp.getGender()=='F' && emp.getAge()>=21)
-		empList[numOfEmployee++]=new Employee(emp.getName(), emp.getAge(), emp.getGender(), emp.getworkinHoures(), emp.getID());
-		return true;
-		}
-		return false; 
-		}
-
 	
 	public int searchEmployee(int id){
 		for(int i=0;i<numOfEmployee;i++){
@@ -123,18 +112,6 @@ public class Gym {
 		return -1 ;
 	}
 	
-	
-	public boolean removeEmployee(int id) {
-		int loc=searchEmployee(id);
-	    if(loc<numOfEmployee && loc>=0){
-	       for(int i=loc;i<numOfEmployee-1;i++) 
-	       empList[i]=empList[i+1];
-	    
-	       empList[--numOfEmployee]=null;
-	       return true;
-	    }
-           return false;
-	}
 
 	
 	public int getNumOfMembers() {
@@ -158,15 +135,27 @@ public class Gym {
 		
 		return num ;
 	}
+
+	public int getNumOfEmployees() {
+		int num = 0 ;
+		
+		for ( int i = 0 ; i < numOfPeople ; i++ ) {
+			if ( pList[i] instanceof Employee )
+				num++ ;
+		}
+		
+		return num ;
+	}
 	
 	 public void Display() {
 		  
 		  System.out.println("--------------Gym's information---------------"); 
-		  System.out.println("Gym Name: " + name + "\nLocation: "+ location + "\nNumber of Employees: "+ numOfEmployee +"\nNumber of Members: "+getNumOfMembers()+"\nNumber of Trainers: "+ getNumOfTrainers() );
+		  System.out.println("Gym Name: " + name + "\nLocation: "+ location + "\nNumber of Employees: "+ getNumOfEmployees() +"\nNumber of Members: "+getNumOfMembers()+"\nNumber of Trainers: "+ getNumOfTrainers() );
 		  //display employees INFO
 		  System.out.println("-----Employees INFO-------");
-		  for(int i=0 ; i< numOfEmployee ; i++)
-		    empList[i].Print() ;
+		   for(int i=0 ; i< numOfPeople ; i++)
+		   if ( pList[i] instanceof Employee )
+		    pList[i].Print() ;
 		  //display members INFO
 		  System.out.println("-----Members INFO-------");
 		  for(int i=0 ; i< numOfPeople ; i++)
