@@ -8,12 +8,12 @@ public class GymManagementSystem {
 		
 		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 500, 200);
 		
+		System.out.println("**************** Gym Management System ****************");
+			System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
 		
 		int choice ;
 		do {
 			
-			System.out.println("**************** Gym Management System ****************");
-			System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
 			System.out.println("1. Add member");
 			System.out.println("2. Remove member");
 			// ****************************
