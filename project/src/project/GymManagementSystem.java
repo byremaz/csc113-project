@@ -6,7 +6,7 @@ public class GymManagementSystem {
 	public static void main(String[] args) {
 		Scanner input = new Scanner ( System.in );
 		
-		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 1500, 500);
+		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 500, 200);
 		
 		
 		int choice ;
