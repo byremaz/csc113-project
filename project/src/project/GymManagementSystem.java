@@ -21,6 +21,11 @@ public class GymManagementSystem {
 			System.out.println("5. Add Emoployee ");
 			System.out.println("6. Remove Employee");
 			System.out.println("7. Add Equipment");
+			System.out.println("8. search Equipment By Name") ; 
+			System.out.println("9. search Equipment By Type") ; 
+			System.out.println("10. Count Number of Employees") ; 
+			System.out.println("11. Count Number of Members") ; 
+			System.out.println("12. Count Number of Trainers") ; 
 	
 			
 			
@@ -143,9 +148,9 @@ public class GymManagementSystem {
 				System.out.println("------------ Add Equipment ------------");
 				System.out.println("Enter equipment name" ) ;
 				String nameEQ = input.next(); 
-				System.out.println("Enter equipment Type" ) ;
+				System.out.println("Enter equipment Type:" ) ;
 				String typeEQ = input.next(); 
-				System.out.println("Enter equipment Quantity " ) ;
+				System.out.println("Enter equipment Quantity: " ) ;
 				int quantity = input.nextInt(); 
 				Equipment newEquipment = new Equipment(nameEQ , typeEQ , quantity) ; 
 				if(FitnessTime.addEquipment(newEquipment))
@@ -157,10 +162,41 @@ public class GymManagementSystem {
 				
 				
 
-			
+			case 8: 
+				System.out.println("------------ Search Equipment By Name ------------");
+				System.out.println("Enter Equipment name:"); 
+				String EQname = input.next() ; 
+				if(FitnessTime.searchEquipmentByName(EQname) != null)
+					System.out.println("The equipment is exist ") ; 
+				else 
+					System.out.println("The equipment does not exist ") ; 
+					
+
 				
-			
+			case 9: 
+				System.out.println("------------ Search Equipment By Type ------------");
+				System.out.println("------------ Search Equipment By Name ------------");
+				System.out.println("Enter Equipment name:"); 
+				String EQType = input.next() ; 
+				if(FitnessTime.searchEquipmentByType(EQType) != null)
+					System.out.println("The equipment is exist ") ; 
+				else 
+					System.out.println("The equipment does not exist ") ; 
 				
+					
+			case 10: 
+				System.out.println("------------ Count number of Employees ------------");
+				System.out.println("The number of Employees: " +FitnessTime.getNumOfEmployees() ) ; 
+				
+				
+			case 11:
+				System.out.println("------------ Count number of Members ------------");
+				System.out.println("The number of Members: " +FitnessTime.getNumOfMembers() ) ; 
+				
+				
+			case 12:
+				System.out.println("------------ Count number of Trainers ------------");
+				System.out.println("The number of Trainers: " +FitnessTime.getNumOfTrainers() ) ; 
 			
 			
 			
