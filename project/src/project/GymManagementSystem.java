@@ -16,9 +16,9 @@ public class GymManagementSystem {
 			
 			System.out.println("1. Add member");
 			System.out.println("2. Remove member");
-			System.out.println("3. Add Triner ");
-			System.out.println("4. Remove Triner ");
-			System.out.println("5. Add Emoployee ");
+			System.out.println("3. Add Trainer ");
+			System.out.println("4. Remove Trainer ");
+			System.out.println("5. Add Employee ");
 			System.out.println("6. Remove Employee");
 			System.out.println("7. Add Equipment");
 			System.out.println("8. search Equipment By Name") ; 
