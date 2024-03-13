@@ -28,7 +28,7 @@ public class Equipment {
 
 	public String toString() {
 		
-		return "Equipment Name: " + Name + " Type:" + Type + " Quantity: "+ Quantity + "\n";
+		return "Equipment Name: " + Name + " Type:" + Type + " Quantity: "+ Quantity + " ID: " + ID+ "\n";
 	
 	}
 
