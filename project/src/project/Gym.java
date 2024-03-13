@@ -44,12 +44,12 @@ public class Gym {
 	}
 
 	
-	public boolean searchPerson(int id){
-		for(int i=0 ; i<NumOfPeople ; i++){
+	public int searchPerson(int id){
+		for(int i=0 ; i<NumOfPeople ; i++)
 		    if(peopleList[i].getID()==id)		 
-		    return true ;
-		}
-		return false ; 
+		    return i ;
+		
+		return -1 ; 
 	}
 	
 
