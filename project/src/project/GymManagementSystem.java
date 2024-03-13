@@ -87,7 +87,7 @@ public class GymManagementSystem {
 				else {
 					Person[] Peoplelist = FitnessTime.getPeopleList() ;
 					System.out.println("Found Member with ID:"+ searchMemberID) ; 
-					System.out.println("-------- Trainer INFO -----------") ; 
+					System.out.println("-------- Member INFO -----------") ; 
 					Peoplelist[FitnessTime.searchPerson(searchMemberID)].Print(); 	
 				}
 				break ;
