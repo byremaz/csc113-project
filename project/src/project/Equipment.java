@@ -5,11 +5,13 @@ public class Equipment {
 	private String Name ;
 	private String Type ;
 	private int Quantity ;
+	private int ID ;
 	
-	public Equipment(String name, String type, int quantity) {
+	public Equipment(String name, String type, int quantity, int id) {
 		Name = name;
 		Type = type;
 		Quantity = quantity;
+		ID = id ;
 	}
 
 	public String getName() {
@@ -30,4 +32,10 @@ public class Equipment {
 	
 	}
 
+	public int getID() {
+		return ID;
+	}
+
+	
+	
 }
