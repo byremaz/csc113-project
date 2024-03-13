@@ -95,7 +95,7 @@ public class GymManagementSystem {
 			case 4: 
 				
 				System.out.println("------------ Add trainer ------------");
-				System.out.println("**Trainer have to be 23 years old or older with tow or more ywars of experience**");
+				System.out.println("**Trainer have to be 23 years old or older with tow or more years of experience**");
 				System.out.print("Enter Trainer Name: ");
 				String TrainerName = input.next() ;
 				System.out.print("Enter Trainer Age: ");
