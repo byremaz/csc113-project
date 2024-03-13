@@ -184,6 +184,12 @@ public class Gym {
 		
 		return num ;
 	}
+
+
+	public Person[] getPeopleList() {
+		return peopleList;
+	}
+
 	
 	 public void Display() {
 		  
