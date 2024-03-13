@@ -3,15 +3,16 @@ package project;
 public class Equipment {
 	
 	private String Name ;
+	private int ID ;
 	private String Type ;
 	private int Quantity ;
-	private int ID ;
 	
-	public Equipment(String name, String type, int quantity, int id) {
+	public Equipment(String name, int id, String type, int quantity) {
 		Name = name;
+		ID = id ;
+
 		Type = type;
 		Quantity = quantity;
-		ID = id ;
 	}
 
 	public String getName() {
