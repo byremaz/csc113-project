@@ -10,7 +10,6 @@ public class Equipment {
 	public Equipment(String name, int id, String type, int quantity) {
 		Name = name;
 		ID = id ;
-
 		Type = type;
 		Quantity = quantity;
 	}
