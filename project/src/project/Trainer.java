@@ -18,6 +18,8 @@ public class Trainer extends Person{
 		System.out.println("Trainer Gender: "+ Gender);
 		System.out.println("Trainer ID: "+ ID);
 		System.out.println("Trainer Experience: "+ ExperienceYears);
+		System.out.println("Trainer Salary: "+ calculateSalary());
+
 		
 	}
 	
