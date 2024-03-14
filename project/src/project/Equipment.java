@@ -25,16 +25,18 @@ public class Equipment {
 	public int getQuantity() {
 		return Quantity;
 	}
-
+	
+	public int getID() {
+		return ID;
+	}
+	
 	public String toString() {
 		
 		return "Equipment Name: " + Name + " ID: " + ID+" Type:" + Type + " Quantity: "+ Quantity + "\n";
 	
 	}
 
-	public int getID() {
-		return ID;
-	}
+
 
 	
 	
