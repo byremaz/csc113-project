@@ -20,28 +20,30 @@ public class Gym {
 	}
 	
 	
-	public boolean addPerson (Person p) {
-	
-	if(NumOfPeople<peopleList.length) {
-	
-			if(p instanceof Member) 
-				if((p.getGender()=='F' || p.getGender()=='f') && p.getAge()>=16){
-				peopleList[NumOfPeople++]=new Member(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());
-				return true;
-}
-			else if(p instanceof Trainer) 
-				if((p.getGender()=='F' || p.getGender()=='f') && p.getAge()>=23){
-				peopleList[NumOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears());
-				return true;
-}
-		else if(p instanceof Employee) 
-				if((p.getGender()=='F' || p.getGender()=='f') && p.getAge()>=21){
-				peopleList[NumOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkHours(), p.getID());
-				return true;
-}
+public boolean addPerson (Person p) {
+if(NumOfPeople<peopleList.length) {
+
+	if(p instanceof Member) {
+	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 16) {
+	        peopleList[NumOfPeople++] = new Member(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());
+	        return true;
+	    }
 	}
-	return false; 
+	else if(p instanceof Trainer) {
+	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 23) {
+	        peopleList[NumOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears());
+	        return true;
+	    }
 	}
+	else if(p instanceof Employee) {
+	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 21) {
+	        peopleList[NumOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkHours(), p.getID());
+	        return true;
+	    }
+	}
+}
+return false; 
+}
 
 	
 	public int searchPerson(int id){
