@@ -53,10 +53,10 @@ public class GymManagementSystem {
 				int age = input.nextInt();
 				System.out.print("Enter member Gender: ");
 				char gender = input.next().charAt(0);
-				System.out.print("Enter member membershipType: ");
+				System.out.print("Enter member's membership Type 'G' for gold or 'S' for silver: ");
 				char membershipType = input.next().charAt(0);
 				input.nextLine();
-				System.out.print("Enter member goal: ");
+				System.out.print("Enter member's weight goal: ");
 				String Goal = input.nextLine() ;
 				System.out.print("Enter member ID: ");
 				int id = input.nextInt();
@@ -95,14 +95,14 @@ public class GymManagementSystem {
 			case 4: 
 				
 				System.out.println("------------ Add trainer ------------");
-				System.out.println("**Trainer have to be 23 years old or older with tow or more years of experience**");
+				System.out.println("**Trainer have to be 23 years old or older with two or more years of experience**");
 				System.out.print("Enter Trainer Name: ");
 				String TrainerName = input.next() ;
 				System.out.print("Enter Trainer Age: ");
 				int TrainerAge = input.nextInt();
 				System.out.print("Enter Trainer Gender: ");
 				char TrainerGender = input.next().charAt(0);
-				System.out.print("Enter Trainer Id: ");
+				System.out.print("Enter Trainer ID: ");
 				int TrainerID = input.nextInt(); 
 				System.out.print("Enter Trainer Experience Years: ");
 				int ExperienceYears = input.nextInt() ; 
@@ -150,7 +150,7 @@ public class GymManagementSystem {
 				int EmployeeAge = input.nextInt();
 				System.out.print("Enter Employee Gender: ");
 				char EmployeeGender = input.next().charAt(0);
-				System.out.print("Enter Employee Id: ");
+				System.out.print("Enter Employee ID: ");
 				int EmployeeID= input.nextInt(); 
 				System.out.print("Enter Employee Work Hours: ");
 				int workHours = input.nextInt() ; 
@@ -202,7 +202,7 @@ public class GymManagementSystem {
 				if(FitnessTime.addEquipment(newEquipment))
 				System.out.println("Equipment is successfully added.");
 				else
-					System.out.println("Failed to add Equipment, there is no emptay space.");
+					System.out.println("Failed to add Equipment, there is no empty space.");
 				System.out.println("---------------------------------");
 				break; 
 				
