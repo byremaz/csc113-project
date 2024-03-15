@@ -19,6 +19,8 @@ package project;
 		System.out.println("Member Age: "+ Age);
 		System.out.println("Member Gender: "+ Gender);
 		System.out.println("Working Hours: "+ workHours);
+		System.out.println("Employee Salary: "+ calculateSalary());
+
 	}
 	public int getworkHours() 
 	{
