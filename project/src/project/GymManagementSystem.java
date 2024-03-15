@@ -41,7 +41,7 @@ public class GymManagementSystem {
 			String Goal = input.nextLine() ;
 			System.out.print("Enter member's ID: ");
 			int id = input.nextInt();
-			Person newMember = new Member(name,age,gender,id,membershipType,Goal);
+			Member newMember = new Member(name,age,gender,id,membershipType,Goal);
 			if ( FitnessTime.addPerson(newMember) )
 				System.out.println("Member is successfully added.");
 			else
@@ -65,7 +65,7 @@ public class GymManagementSystem {
 			int TrainerID = input.nextInt(); 
 			System.out.print("Enter Trainer's Experience Years: ");
 			int ExperienceYears = input.nextInt() ; 
-			Person newTrainer = new Trainer(TrainerName,TrainerAge,TrainerGender,TrainerID ,ExperienceYears);
+			Trainer newTrainer = new Trainer(TrainerName,TrainerAge,TrainerGender,TrainerID ,ExperienceYears);
 			if ( FitnessTime.addPerson(newTrainer) )
 				System.out.println("Trainer is successfully added.");
 			else
