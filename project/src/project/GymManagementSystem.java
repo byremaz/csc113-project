@@ -34,7 +34,7 @@ public class GymManagementSystem {
 			int age = input.nextInt();
 			System.out.print("Enter member's Gender 'F' for female: ");
 			char gender = input.next().charAt(0);
-			System.out.print("Enter member's membership Type 'Gold' or 'Silver': ");
+			System.out.print("Enter member's membership Type 'G' for gold or 'S' for silver: ");
 			char membershipType = input.next().charAt(0);
 			input.nextLine();
 			System.out.print("Enter member's weight goal: ");
