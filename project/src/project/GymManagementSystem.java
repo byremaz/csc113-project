@@ -8,7 +8,73 @@ public class GymManagementSystem {
 		
 		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 500, 200);
 		
-		System.out.println("**************** Gym Management System ****************");
+		Person empNorah=new Employee("Norah",23,'f',6,1122334400);
+		Person empLama=new Employee("Lama",28,'f',8,1123458900);
+		Person empSara=new Employee("Sara",24,'f',7,1254768000);
+		
+		FitnessTime.addPerson(empNorah);
+		FitnessTime.addPerson(empLama);
+		FitnessTime.addPerson(empSara);
+		
+		Equipment treadmill=new Equipment("treadmill", 1, "cardio", 5);
+		Equipment elliptical=new Equipment("elliptical", 2, "cardio", 5);
+		Equipment latPulldown=new Equipment("lat pulldown", 3, "strength", 2);
+
+		FitnessTime.addEquipment(treadmill);
+		FitnessTime.addEquipment(elliptical);
+		FitnessTime.addEquipment(latPulldown);
+		
+		System.out.print("------Add two members to FitnessTime------");
+		System.out.println("\n**Membership is restricted to females aged 16 years and older**");
+
+		for(int i=1; i<3; i++) {
+			System.out.print("Enter member's Name: ");
+			String name = input.next() ;
+			System.out.print("Enter member's Age: ");
+			int age = input.nextInt();
+			System.out.print("Enter member's Gender 'F' for female: ");
+			char gender = input.next().charAt(0);
+			System.out.print("Enter member's membership Type 'Gold' or 'Silver': ");
+			char membershipType = input.next().charAt(0);
+			input.nextLine();
+			System.out.print("Enter member's weight goal: ");
+			String Goal = input.nextLine() ;
+			System.out.print("Enter member's ID: ");
+			int id = input.nextInt();
+			Person newMember = new Member(name,age,gender,id,membershipType,Goal);
+			if ( FitnessTime.addPerson(newMember) )
+				System.out.println("Member is successfully added.");
+			else
+				System.out.println("Failed to add Member, Please check member information.");
+			System.out.println("---------------------------------");
+
+		}
+
+		
+		System.out.print("------Add two trainers to FitnessTime------");
+		System.out.println("\n**Trainer have to be 23 years old or older with two or more years of experience**");
+
+		for(int i=1; i<3; i++) {
+			System.out.print("Enter Trainer's Name: ");
+			String TrainerName = input.next() ;
+			System.out.print("Enter Trainer's Age: ");
+			int TrainerAge = input.nextInt();
+			System.out.print("Enter Trainer's Gender 'F' for female: ");
+			char TrainerGender = input.next().charAt(0);
+			System.out.print("Enter Trainer's ID: ");
+			int TrainerID = input.nextInt(); 
+			System.out.print("Enter Trainer's Experience Years: ");
+			int ExperienceYears = input.nextInt() ; 
+			Person newTrainer = new Trainer(TrainerName,TrainerAge,TrainerGender,TrainerID ,ExperienceYears);
+			if ( FitnessTime.addPerson(newTrainer) )
+				System.out.println("Trainer is successfully added.");
+			else
+				System.out.println("Failed to add Trainer, Please check Trainer information.");
+			System.out.println("---------------------------------"); 
+		}
+
+		
+		System.out.println("\n**************** Gym Management System ****************");
 			System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
 		
 		int choice ;
@@ -47,11 +113,11 @@ public class GymManagementSystem {
 			case 1: 
 				System.out.println("------------ Add member ------------");
 				System.out.println("**Membership is restricted to females aged 16 years and older**");
-				System.out.print("Enter member's Name: ");
+				System.out.print("Enter member Name: ");
 				String name = input.next() ;
 				System.out.print("Enter member's Age: ");
 				int age = input.nextInt();
-				System.out.print("Enter member's Gender: ");
+				System.out.print("Enter member's Gender 'F' for female: ");
 				char gender = input.next().charAt(0);
 				System.out.print("Enter member's membership Type 'G' for gold or 'S' for silver: ");
 				char membershipType = input.next().charAt(0);
@@ -69,7 +135,7 @@ public class GymManagementSystem {
 				break ;
 			case 2:
 				System.out.println("------------ Remove member ------------");
-				System.out.print("Enter member's ID: ");
+				System.out.print("Enter member ID: ");
 				int Id = input.nextInt();
 				if ( FitnessTime.removePerson(Id) )
 					System.out.println("Member is Successfully removed");
@@ -100,7 +166,7 @@ public class GymManagementSystem {
 				String TrainerName = input.next() ;
 				System.out.print("Enter Trainer's Age: ");
 				int TrainerAge = input.nextInt();
-				System.out.print("Enter Trainer's Gender: ");
+				System.out.print("Enter Trainer's Gender 'F' for female: ");
 				char TrainerGender = input.next().charAt(0);
 				System.out.print("Enter Trainer's ID: ");
 				int TrainerID = input.nextInt(); 
@@ -148,11 +214,11 @@ public class GymManagementSystem {
 				String EmployeeName= input.next() ;
 				System.out.print("Enter Employee's Age: ");
 				int EmployeeAge = input.nextInt();
-				System.out.print("Enter Employee's Gender: ");
+				System.out.print("Enter Employee's Gender 'F' for female: ");
 				char EmployeeGender = input.next().charAt(0);
 				System.out.print("Enter Employee's ID: ");
 				int EmployeeID= input.nextInt(); 
-				System.out.print("Enter Employee's Work Hours: ");
+				System.out.print("Enter Employee's Work Hours in a day: ");
 				int workHours = input.nextInt() ; 
 				Employee newEmployee = new Employee(EmployeeName,EmployeeAge,EmployeeGender,workHours,EmployeeID);
 				if ( FitnessTime.addPerson(newEmployee ) )
@@ -202,7 +268,7 @@ public class GymManagementSystem {
 				if(FitnessTime.addEquipment(newEquipment))
 				System.out.println("Equipment is successfully added.");
 				else
-					System.out.println("Failed to add Equipment, there is no empty space.");
+					System.out.println("Failed to add Equipment, there is no emptay space.");
 				System.out.println("---------------------------------");
 				break; 
 				
@@ -289,24 +355,7 @@ public class GymManagementSystem {
 			
 			}
 			
-			
-			
-			
-			
-			
 		}while (choice != 17);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 
