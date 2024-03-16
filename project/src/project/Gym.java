@@ -79,33 +79,23 @@ return false;
 	
 	
 	
-	public Equipment[] searchEquipmentByName (String name) {
-		Equipment[] equipmentName=new Equipment[NumOfEquipment];
-		int j=0;
-		for(int i=0; i<NumOfEquipment; i++) 
-			if(equipmentList[i].getName().equalsIgnoreCase(name))
-			equipmentName[j++]=equipmentList[i];
-		
-		if(j==0)
-			return null;
-		else 
-			return equipmentName;
-	}
+	public boolean searchEquipmentByName (String name) {
+	for(int i=0; i<NumOfEquipment; i++) 
+		if(equipmentList[i].getName().equalsIgnoreCase(name))
+      return true;
 	
-	
-	
-	public Equipment[] searchEquipmentByType (String type) {
-		Equipment[] equipmentType=new Equipment[NumOfEquipment];
-		int j=0;
-		for(int i=0; i<NumOfEquipment; i++) 
-			if(equipmentList[i].getType().equalsIgnoreCase(type))
-			equipmentType[j++]=equipmentList[i];
-		
-		if(j==0)
-			return null;
-		else 
-			return equipmentType;
-	}
+		return false;
+}
+
+
+
+public boolean searchEquipmentByType (String type) {
+	for(int i=0; i<NumOfEquipment; i++) 
+		if(equipmentList[i].getType().equalsIgnoreCase(type))	
+		return true;
+	 
+		return false;
+}
 	
 	
 	public boolean removeEquipment(int id) {
