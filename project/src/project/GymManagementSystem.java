@@ -16,9 +16,9 @@ public class GymManagementSystem {
 		FitnessTime.addPerson(empLama);
 		FitnessTime.addPerson(empSara);
 		
-		Equipment treadmill=new Equipment("treadmill", 1, "cardio", 5);
-		Equipment elliptical=new Equipment("elliptical", 2, "cardio", 5);
-		Equipment latPulldown=new Equipment("lat pulldown", 3, "strength", 2);
+		Equipment treadmill=new Equipment("treadmill", 1, "cardio");
+		Equipment elliptical=new Equipment("elliptical", 2, "cardio");
+		Equipment latPulldown=new Equipment("lat pulldown", 3, "strength");
 
 		FitnessTime.addEquipment(treadmill);
 		FitnessTime.addEquipment(elliptical);
@@ -214,14 +214,8 @@ public class GymManagementSystem {
 				System.out.print("Enter equipment ID: " ) ;
 				int EquipmentID = input.nextInt(); 
 				System.out.print("Enter equipment Type: " ) ;
-				String EquipmentType = input.next(); 
-				System.out.print("Enter equipment Quantity: " ) ;
-				int EquipmentQuantity = input.nextInt(); 
-				while (EquipmentQuantity <= 0) {
-					System.out.print("Enter a correct value for equipment Quantity: " ) ;
-					EquipmentQuantity = input.nextInt(); 
-		        }
-				Equipment newEquipment = new Equipment(EquipmentName , EquipmentID, EquipmentType , EquipmentQuantity) ; 
+				String EquipmentType = input.next();
+				Equipment newEquipment = new Equipment(EquipmentName , EquipmentID, EquipmentType) ; 
 				if(FitnessTime.addEquipment(newEquipment))
 				System.out.println("Equipment is successfully added.");
 				else
