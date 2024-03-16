@@ -30,7 +30,7 @@ if(NumOfPeople<peopleList.length) {
 	    }
 	}
 	else if(p instanceof Trainer) {
-	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 23) {
+	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 23 && ((Trainer)p).getExperienceYears()>=2) {
 	        peopleList[NumOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears());
 	        return true;
 	    }
