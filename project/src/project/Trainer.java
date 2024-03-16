@@ -13,12 +13,12 @@ public class Trainer extends Person{
 
 	public void Print() {
 			
-		System.out.println("Trainer Name: "+ Name);
-		System.out.println("Trainer Age: "+ Age);
-		System.out.println("Trainer Gender: "+ Gender);
-		System.out.println("Trainer ID: "+ ID);
-		System.out.println("Trainer Experience: "+ ExperienceYears);
-		System.out.println("Trainer Salary: "+ calculateSalary());
+		System.out.println("Trainer's Name: "+ Name);
+		System.out.println("Trainer's Age: "+ Age);
+		System.out.println("Trainer's Gender: "+ Gender);
+		System.out.println("Trainer's ID: "+ ID);
+		System.out.println("Trainer's Experience: "+ ExperienceYears);
+		System.out.println("Trainer's Salary: "+ calculateSalary());
 
 		
 	}
