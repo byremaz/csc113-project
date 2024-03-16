@@ -292,7 +292,7 @@ public class GymManagementSystem {
 				case 't': case 'T':
 					System.out.print("Enter Equipment Type: "); 
 					String searchEquipmentType = input.next() ; 
-					if(FitnessTime.searchEquipmentByType(searchEquipmentType) != null)
+					if(FitnessTime.searchEquipmentByType(searchEquipmentType) )
 						System.out.println("Found the Equipment.") ; 
 					else
 						System.out.println("The equipment does not exist.") ; 
@@ -300,7 +300,7 @@ public class GymManagementSystem {
 				case 'n' : case 'N' :
 					System.out.print("Enter Equipment name:"); 
 					String searchEquipmentName = input.next() ; 
-					if(FitnessTime.searchEquipmentByName(searchEquipmentName) != null)
+					if(FitnessTime.searchEquipmentByName(searchEquipmentName) )
 						System.out.println("Found the Equipment.") ; 
 					else 
 						System.out.println("The equipment does not exist ") ; 
