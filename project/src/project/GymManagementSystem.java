@@ -8,73 +8,7 @@ public class GymManagementSystem {
 		
 		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 500, 200);
 		
-		Person empNorah=new Employee("Norah",23,'f',6,1122334400);
-		Person empLama=new Employee("Lama",28,'f',8,1123458900);
-		Person empSara=new Employee("Sara",24,'f',7,1254768000);
-		
-		FitnessTime.addPerson(empNorah);
-		FitnessTime.addPerson(empLama);
-		FitnessTime.addPerson(empSara);
-		
-		Equipment treadmill=new Equipment("treadmill", 1, "cardio", 5);
-		Equipment elliptical=new Equipment("elliptical", 2, "cardio", 5);
-		Equipment latPulldown=new Equipment("lat pulldown", 3, "strength", 2);
-
-		FitnessTime.addEquipment(treadmill);
-		FitnessTime.addEquipment(elliptical);
-		FitnessTime.addEquipment(latPulldown);
-		
-		System.out.print("------Add two members to FitnessTime------");
-		System.out.println("\n**Membership is restricted to females aged 16 years and older**");
-
-		for(int i=1; i<3; i++) {
-			System.out.print("Enter member's Name: ");
-			String name = input.next() ;
-			System.out.print("Enter member's Age: ");
-			int age = input.nextInt();
-			System.out.print("Enter member's Gender 'F' for female: ");
-			char gender = input.next().charAt(0);
-			System.out.print("Enter member's membership Type 'G' for gold or 'S' for silver: ");
-			char membershipType = input.next().charAt(0);
-			input.nextLine();
-			System.out.print("Enter member's weight goal: ");
-			String Goal = input.nextLine() ;
-			System.out.print("Enter member's ID: ");
-			int id = input.nextInt();
-			Member newMember = new Member(name,age,gender,id,membershipType,Goal);
-			if ( FitnessTime.addPerson(newMember) )
-				System.out.println("Member is successfully added.");
-			else
-				System.out.println("Failed to add Member, Please check member information.");
-			System.out.println("---------------------------------");
-
-		}
-
-		
-		System.out.print("------Add two trainers to FitnessTime------");
-		System.out.println("\n**Trainer have to be 23 years old or older with two or more years of experience**");
-
-		for(int i=1; i<3; i++) {
-			System.out.print("Enter Trainer's Name: ");
-			String TrainerName = input.next() ;
-			System.out.print("Enter Trainer's Age: ");
-			int TrainerAge = input.nextInt();
-			System.out.print("Enter Trainer's Gender 'F' for female: ");
-			char TrainerGender = input.next().charAt(0);
-			System.out.print("Enter Trainer's ID: ");
-			int TrainerID = input.nextInt(); 
-			System.out.print("Enter Trainer's Experience Years: ");
-			int ExperienceYears = input.nextInt() ; 
-			Trainer newTrainer = new Trainer(TrainerName,TrainerAge,TrainerGender,TrainerID ,ExperienceYears);
-			if ( FitnessTime.addPerson(newTrainer) )
-				System.out.println("Trainer is successfully added.");
-			else
-				System.out.println("Failed to add Trainer, Please check Trainer information.");
-			System.out.println("---------------------------------"); 
-		}
-
-		
-		System.out.println("\n**************** Gym Management System ****************");
+		System.out.println("**************** Gym Management System ****************");
 			System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
 		
 		int choice ;
@@ -115,16 +49,16 @@ public class GymManagementSystem {
 				System.out.println("**Membership is restricted to females aged 16 years and older**");
 				System.out.print("Enter member Name: ");
 				String name = input.next() ;
-				System.out.print("Enter member's Age: ");
+				System.out.print("Enter member Age: ");
 				int age = input.nextInt();
-				System.out.print("Enter member's Gender 'F' for female: ");
+				System.out.print("Enter member Gender: ");
 				char gender = input.next().charAt(0);
-				System.out.print("Enter member's membership Type 'G' for gold or 'S' for silver: ");
+				System.out.print("Enter member membershipType: ");
 				char membershipType = input.next().charAt(0);
 				input.nextLine();
-				System.out.print("Enter member's weight goal: ");
+				System.out.print("Enter member goal: ");
 				String Goal = input.nextLine() ;
-				System.out.print("Enter member's ID: ");
+				System.out.print("Enter member ID: ");
 				int id = input.nextInt();
 				Member newMember = new Member(name,age,gender,id,membershipType,Goal);
 				if ( FitnessTime.addPerson(newMember) )
@@ -146,7 +80,7 @@ public class GymManagementSystem {
 				
 			case 3:
 				System.out.println("------------ Search member ------------");
-				System.out.print("Enter Member's ID: ");
+				System.out.print("Enter Member ID: ");
 				int searchMemberID = input.nextInt();
 				if ( FitnessTime.searchPerson(searchMemberID) == -1 )
 					System.out.println("No Member with ID: "+searchMemberID) ; 
@@ -161,16 +95,16 @@ public class GymManagementSystem {
 			case 4: 
 				
 				System.out.println("------------ Add trainer ------------");
-				System.out.println("**Trainer have to be 23 years old or older with two or more years of experience**");
-				System.out.print("Enter Trainer's Name: ");
+				System.out.println("**Trainer have to be 23 years old or older with tow or more years of experience**");
+				System.out.print("Enter Trainer Name: ");
 				String TrainerName = input.next() ;
-				System.out.print("Enter Trainer's Age: ");
+				System.out.print("Enter Trainer Age: ");
 				int TrainerAge = input.nextInt();
-				System.out.print("Enter Trainer's Gender 'F' for female: ");
+				System.out.print("Enter Trainer Gender: ");
 				char TrainerGender = input.next().charAt(0);
-				System.out.print("Enter Trainer's ID: ");
+				System.out.print("Enter Trainer Id: ");
 				int TrainerID = input.nextInt(); 
-				System.out.print("Enter Trainer's Experience Years: ");
+				System.out.print("Enter Trainer Experience Years: ");
 				int ExperienceYears = input.nextInt() ; 
 				Trainer newTrainer = new Trainer(TrainerName,TrainerAge,TrainerGender,TrainerID ,ExperienceYears);
 				if ( FitnessTime.addPerson(newTrainer) )
@@ -182,7 +116,7 @@ public class GymManagementSystem {
 				
 			case 5: 
 				System.out.println("------------ Remove Trainer ------------");
-				System.out.print("Enter Trainer's ID: ");
+				System.out.print("Enter Trainer ID: ");
 				int TrainerId= input.nextInt();
 				if ( FitnessTime.removePerson(TrainerId) )
 					System.out.println("Trainer is Successfully removed");
@@ -194,7 +128,7 @@ public class GymManagementSystem {
 				
 			case 6:
 				System.out.println("------------ Search Trainer ------------");
-				System.out.print("Enter Trainer's ID: ");
+				System.out.print("Enter Trainer ID: ");
 				int searchTrainerID = input.nextInt();
 				if ( FitnessTime.searchPerson(searchTrainerID) == -1 )
 					System.out.println("No Trainer with ID: "+searchTrainerID) ; 
@@ -210,15 +144,15 @@ public class GymManagementSystem {
 				
 				System.out.println("------------ Add Employee ------------");
 				System.out.println("**Employee have to be 21 years old or more**");
-				System.out.print("Enter Employee's Name: ");
+				System.out.print("Enter Employee Name: ");
 				String EmployeeName= input.next() ;
-				System.out.print("Enter Employee's Age: ");
+				System.out.print("Enter Employee Age: ");
 				int EmployeeAge = input.nextInt();
-				System.out.print("Enter Employee's Gender 'F' for female: ");
+				System.out.print("Enter Employee Gender: ");
 				char EmployeeGender = input.next().charAt(0);
-				System.out.print("Enter Employee's ID: ");
+				System.out.print("Enter Employee Id: ");
 				int EmployeeID= input.nextInt(); 
-				System.out.print("Enter Employee's Work Hours in a day: ");
+				System.out.print("Enter Employee Work Hours: ");
 				int workHours = input.nextInt() ; 
 				Employee newEmployee = new Employee(EmployeeName,EmployeeAge,EmployeeGender,workHours,EmployeeID);
 				if ( FitnessTime.addPerson(newEmployee ) )
@@ -230,7 +164,7 @@ public class GymManagementSystem {
 				
 			case 8: 
 				System.out.println("------------ Remove Employee ------------");
-				System.out.print("Enter Employee's ID: ");
+				System.out.print("Enter Employee ID: ");
 				int EmployeeId = input.nextInt(); 
 				if ( FitnessTime.removePerson(EmployeeId) )
 					System.out.println("Employee is Successfully removed");
@@ -241,7 +175,7 @@ public class GymManagementSystem {
 			
 			case 9:
 				System.out.println("------------ Search Employee ------------");
-				System.out.print("Enter Employee's ID: ");
+				System.out.print("Enter Employee ID: ");
 				int searchEmployeeID = input.nextInt();
 				if ( FitnessTime.searchPerson(searchEmployeeID) == -1 )
 					System.out.println("No employee with ID: "+searchEmployeeID) ; 
@@ -264,11 +198,15 @@ public class GymManagementSystem {
 				String EquipmentType = input.next(); 
 				System.out.print("Enter equipment Quantity: " ) ;
 				int EquipmentQuantity = input.nextInt(); 
+				while (EquipmentQuantity <= 0) {
+					System.out.print("Enter a correct value for equipment Quantity: " ) ;
+					EquipmentQuantity = input.nextInt(); 
+		        }
 				Equipment newEquipment = new Equipment(EquipmentName , EquipmentID, EquipmentType , EquipmentQuantity) ; 
 				if(FitnessTime.addEquipment(newEquipment))
 				System.out.println("Equipment is successfully added.");
 				else
-					System.out.println("Failed to add Equipment, there is no emptay space.");
+					System.out.println("Failed to add Equipment, there is no empty space.");
 				System.out.println("---------------------------------");
 				break; 
 				
@@ -292,7 +230,7 @@ public class GymManagementSystem {
 				case 't': case 'T':
 					System.out.print("Enter Equipment Type: "); 
 					String searchEquipmentType = input.next() ; 
-					if(FitnessTime.searchEquipmentByType(searchEquipmentType) )
+					if(FitnessTime.searchEquipmentByType(searchEquipmentType))
 						System.out.println("Found the Equipment.") ; 
 					else
 						System.out.println("The equipment does not exist.") ; 
@@ -300,7 +238,7 @@ public class GymManagementSystem {
 				case 'n' : case 'N' :
 					System.out.print("Enter Equipment name:"); 
 					String searchEquipmentName = input.next() ; 
-					if(FitnessTime.searchEquipmentByName(searchEquipmentName) )
+					if(FitnessTime.searchEquipmentByName(searchEquipmentName))
 						System.out.println("Found the Equipment.") ; 
 					else 
 						System.out.println("The equipment does not exist ") ; 
@@ -313,18 +251,6 @@ public class GymManagementSystem {
 				
 				
 			case 13:
-				System.out.println("------------ All Employees Information ------------");
-				System.out.println("------------ Number of Employees: "+FitnessTime.getNumOfEmployees()+" ------------");
-				Person[] AllEmployees = FitnessTime.getEmployees() ;
-				for ( int i = 0 ; i < AllEmployees.length ; i++ )
-					if ( AllEmployees[i] != null ) {
-						AllEmployees[i].Print();
-						System.out.println("-----");
-					}		
-				System.out.println("---------------------------------");
-				break ;
-				
-			case 14:
 				System.out.println("------------ All Members Information ------------");
 				System.out.println("------------ Number of Members: "+FitnessTime.getNumOfMembers()+" ------------");
 				Person[] AllMembers = FitnessTime.getMembers() ;
@@ -336,7 +262,7 @@ public class GymManagementSystem {
 				System.out.println("---------------------------------");
 				break ;
 			
-			case 15:
+			case 14:
 				System.out.println("------------ All Trainers Information ------------");
 				System.out.println("------------ Number of Trainers: "+FitnessTime.getNumOfTrainers()+" ------------");
 				Person[] AllTrainers = FitnessTime.getTrainers() ;
@@ -348,6 +274,18 @@ public class GymManagementSystem {
 				System.out.println("---------------------------------");
 				break ;
 				
+				
+			case 15:
+				System.out.println("------------ All Employees Information ------------");
+				System.out.println("------------ Number of Employees: "+FitnessTime.getNumOfEmployees()+" ------------");
+				Person[] AllEmployees = FitnessTime.getEmployees() ;
+				for ( int i = 0 ; i < AllEmployees.length ; i++ )
+					if ( AllEmployees[i] != null ) {
+						AllEmployees[i].Print();
+						System.out.println("-----");
+					}		
+				System.out.println("---------------------------------");
+				break ;
 			case 16:
 				FitnessTime.Display();
 			
@@ -355,7 +293,24 @@ public class GymManagementSystem {
 			
 			}
 			
+			
+			
+			
+			
+			
 		}while (choice != 17);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
