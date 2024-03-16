@@ -13,12 +13,12 @@ public class Member extends Person {
 
 	public void Print() {
 		
-		System.out.println("Member Name: "+ Name);
-		System.out.println("Member Age: "+ Age);
-		System.out.println("Member Gender: "+ Gender);
-		System.out.println("Member ID: "+ ID);
+		System.out.println("Member's Name: "+ Name);
+		System.out.println("Member's Age: "+ Age);
+		System.out.println("Member's Gender: "+ Gender);
+		System.out.println("Member's ID: "+ ID);
 		System.out.println("Membership Type: "+ MembershipType);
-		System.out.println("Member Goal: "+ Goal);
+		System.out.println("Member's Goal: "+ Goal);
 
 	}
 
