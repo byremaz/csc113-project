@@ -15,9 +15,9 @@ package project;
 	}
 	public void Print()  {
 		
-		System.out.println("Member's Name: "+ Name);
-		System.out.println("Member's Age: "+ Age);
-		System.out.println("Member's Gender: "+ Gender);
+		System.out.println("Employee's Name: "+ Name);
+		System.out.println("Employee's Age: "+ Age);
+		System.out.println("Employee's Gender: "+ Gender);
 		System.out.println("Working Hours: "+ workHours);
 		System.out.println("Employee Salary: "+ calculateSalary());
 
