@@ -8,9 +8,9 @@ public class GymManagementSystem {
 		
 		Gym FitnessTime = new Gym("Fitness Time","Yasmeen, Riyadh", 500, 200);
 		
-		Person empNorah=new Employee("Norah",23,'f',6,1122334400);
-		Person empLama=new Employee("Lama",28,'f',8,1123458900);
-		Person empSara=new Employee("Sara",24,'f',7,1254768000);
+		Employee empNorah=new Employee("Norah",23,'f',6,1122334400);
+		Employee empLama=new Employee("Lama",28,'f',8,1123458900);
+		Employee empSara=new Employee("Sara",24,'f',7,1254768000);
 		
 		FitnessTime.addPerson(empNorah);
 		FitnessTime.addPerson(empLama);
