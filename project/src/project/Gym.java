@@ -20,24 +20,24 @@ public class Gym {
 	}
 	
 	
-public boolean addPerson (Person p) {
+public boolean addPerson (Person person) {
 if(NumOfPeople<peopleList.length) {
 
-	if(p instanceof Member) {
-	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 16) {
-	        peopleList[NumOfPeople++] = new Member(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Member)p).getMembershipType(), ((Member)p).getGoal());
+	if(person instanceof Member) {
+	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 16) {
+	        peopleList[NumOfPeople++] = new Member(person.getName(), person.getAge(), person.getGender(), person.getID(), ((Member)person).getMembershipType(), ((Member)person).getGoal());
 	        return true;
 	    }
 	}
-	else if(p instanceof Trainer) {
-	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 23 && ((Trainer)p).getExperienceYears()>=2) {
-	        peopleList[NumOfPeople++] = new Trainer(p.getName(), p.getAge(), p.getGender(), p.getID(), ((Trainer)p).getExperienceYears());
+	else if(person instanceof Trainer) {
+	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 23 && ((Trainer)person).getExperienceYears()>=2) {
+	        peopleList[NumOfPeople++] = new Trainer(person.getName(), person.getAge(), person.getGender(), person.getID(), ((Trainer)person).getExperienceYears());
 	        return true;
 	    }
 	}
-	else if(p instanceof Employee) {
-	    if((p.getGender() == 'F' || p.getGender() == 'f') && p.getAge() >= 21) {
-	        peopleList[NumOfPeople++] = new Employee(p.getName(), p.getAge(), p.getGender(), ((Employee)p).getworkHours(), p.getID());
+	else if(person instanceof Employee) {
+	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 21) {
+	        peopleList[NumOfPeople++] = new Employee(person.getName(), person.getAge(), person.getGender(), ((Employee)person).getworkHours(), person.getID());
 	        return true;
 	    }
 	}
@@ -69,9 +69,9 @@ return false;
 	
 	
 	
-	public boolean addEquipment(Equipment eq) {
+	public boolean addEquipment(Equipment equipment) {
 		if(NumOfEquipment<equipmentList.length) {
-			equipmentList[NumOfEquipment++]=eq;
+			equipmentList[NumOfEquipment++]=equipment;
 		return true;
 		}
 		return false;
