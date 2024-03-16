@@ -6,11 +6,10 @@ public class Equipment {
 	private int ID ;
 	private String Type ;
 	
-	public Equipment(String name, int id, String type, int quantity) {
+	public Equipment(String name, int id, String type) {
 		Name = name;
 		ID = id ;
 		Type = type;
-		Quantity = quantity;
 	}
 
 	public String getName() {
