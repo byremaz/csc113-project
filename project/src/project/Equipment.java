@@ -5,7 +5,6 @@ public class Equipment {
 	private String Name ;
 	private int ID ;
 	private String Type ;
-	private int Quantity ;
 	
 	public Equipment(String name, int id, String type, int quantity) {
 		Name = name;
@@ -20,10 +19,6 @@ public class Equipment {
 
 	public String getType() {
 		return Type;
-	}
-
-	public int getQuantity() {
-		return Quantity;
 	}
 	
 	public int getID() {
