@@ -71,7 +71,6 @@ return false;
 	
 	public boolean addEquipment(Equipment eq) {
 		if(NumOfEquipment<equipmentList.length) {
-			if (eq.getQuantity()>=1)
 			equipmentList[NumOfEquipment++]=eq;
 		return true;
 		}
