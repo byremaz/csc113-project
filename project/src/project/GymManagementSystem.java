@@ -304,7 +304,7 @@ public class GymManagementSystem {
 			
 			}
 			
-		}while (choice != 17)
+		}while (choice != 17);
 		
 	}
 
