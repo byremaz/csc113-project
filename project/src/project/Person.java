@@ -1,6 +1,9 @@
 package project;
 
-public abstract class Person {
+import java.io.Serializable;
+
+
+public abstract class Person implements Serializable  {
 
 	
 	protected String Name ;
@@ -8,6 +11,8 @@ public abstract class Person {
 	protected char Gender ;
 	protected int ID ;
 	
+	public abstract void Print();
+
 	
 	public Person(String name, int age, char gender, int id) {
 		Name = name;
@@ -17,7 +22,7 @@ public abstract class Person {
 	}
 
 
-	public abstract void Print();
+	
 
 
 	public String getName() {

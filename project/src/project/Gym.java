@@ -1,6 +1,8 @@
 package project;
 
-public class Gym {
+import java.io.Serializable;
+
+public class Gym implements Serializable{
 	
         private String Name;
 	private String Location;
@@ -207,5 +209,5 @@ public boolean searchEquipmentByType (String type) {
 		  for(int i=0 ; i< NumOfEquipment ; i++)
 		   System.out.print(equipmentList[i]);
 
-		   }
+		   }        
 }

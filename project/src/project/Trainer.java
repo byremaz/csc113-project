@@ -21,9 +21,7 @@ public class Trainer extends Person{
 		System.out.println("Trainer's Salary: "+ calculateSalary());
 
 		
-	}
-	
-	public double calculateSalary() {
+}	public double calculateSalary() {
 		if(ExperienceYears == 2) 
 		return 6500 ; 
 		else 

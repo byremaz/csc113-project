@@ -10,8 +10,7 @@ public class Member extends Person {
 		MembershipType = membershipType;
 		Goal = goal;
 	}
-
-	public void Print() {
+public void Print() {
 		
 		System.out.println("Member's Name: "+ Name);
 		System.out.println("Member's Age: "+ Age);
@@ -19,9 +18,7 @@ public class Member extends Person {
 		System.out.println("Member's ID: "+ ID);
 		System.out.println("Membership Type: "+ MembershipType);
 		System.out.println("Member's Goal: "+ Goal);
-
-	}
-
+      }
 
 	public char getMembershipType() {
 		return MembershipType;
