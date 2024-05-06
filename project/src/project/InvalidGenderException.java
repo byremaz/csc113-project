@@ -9,11 +9,7 @@ public class InvalidGenderException extends RuntimeException {
 		
 	}
 	
-	public InvalidGenderException(String string) {
-		
-		super(string) ;
-		
-	}
+
 	
 	
 }
