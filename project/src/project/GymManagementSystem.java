@@ -29,7 +29,7 @@ public class GymManagementSystem {
 
 		
 		System.out.println("**************** Gym Management System ****************");
-			System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
+		System.out.println("Welcome to Gym Management System , what do you need for today? ( Enter your menu option )");
 		
 		int choice ;
 		do {
@@ -60,7 +60,7 @@ public class GymManagementSystem {
 						
 			System.out.print("your choice is : ");
 			choice = input.nextInt() ;
-			
+			boolean EnterWhileLoop = true ;
 			
 			switch(choice) {
 			
@@ -71,16 +71,15 @@ public class GymManagementSystem {
 				String name = input.next() ;
 				
 				
-				boolean enter = true ;
 				int age = 0 ;
-				while(enter)
+				while(EnterWhileLoop)
 				{
 				try{
 				System.out.print("Enter member's Age: ");
 				age = input.nextInt();
 				if ( age < 16 )
                     throw new InvalidAgeException("Age must be 16 years and older");
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidAgeException ex )
 				{
@@ -88,16 +87,16 @@ public class GymManagementSystem {
 				}
 				}
 				
-				enter = true ;
+				EnterWhileLoop = true ;
 				char gender = 0; 
-				while(enter)
+				while(EnterWhileLoop)
 				{
 				try{
 				System.out.print("Enter member's Gender 'F' for female: ");
 				gender = input.next().charAt(0);
 				if (gender != 'F' && gender != 'f') 
                     throw new InvalidGenderException();
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidGenderException ex )
 				{
@@ -112,16 +111,16 @@ public class GymManagementSystem {
 				System.out.print("Enter member's weight goal: ");
 				String Goal = input.nextLine() ;
 				
-				enter = true ;
+				EnterWhileLoop = true ;
 				int id = 0; 
-				while(enter)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter member's ID: ");
 					id = input.nextInt();
 				if (id <= 0) 
                     throw new InvalidIdException();
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -139,16 +138,16 @@ public class GymManagementSystem {
 					
 			case 2:
 				System.out.println("------------ Remove member ------------");
-				boolean enterWhileLoop = true ;
+				EnterWhileLoop = true ;
 				int Id = 0; 
-				while(enterWhileLoop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter member's ID: ");
 					Id = input.nextInt();
 				if (Id <= 0) 
                     throw new InvalidIdException();
-				enterWhileLoop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -165,16 +164,16 @@ public class GymManagementSystem {
 				
 			case 3:
 				System.out.println("------------ Search member ------------");
-				boolean enterwhileLoop = true ;
+				EnterWhileLoop = true ;
 				int searchMemberID = 0; 
-				while(enterwhileLoop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Member's ID: ");
 					searchMemberID = input.nextInt();
 				if (searchMemberID <= 0) 
                     throw new InvalidIdException();
-				enterwhileLoop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -199,16 +198,16 @@ public class GymManagementSystem {
 				System.out.print("Enter Trainer's Name: ");
 				String TrainerName = input.next() ;
 				
-				boolean Enter = true ;
+				EnterWhileLoop = true ;
 				int TrainerAge = 0 ;
-				while(Enter)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Trainer's Age: ");
 					TrainerAge = input.nextInt();
 				if ( TrainerAge < 23 )
                     throw new InvalidAgeException("Age must be 23 years and older");
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidAgeException ex )
 				{
@@ -216,16 +215,16 @@ public class GymManagementSystem {
 				}
 				}
 
-				Enter = true ;
+				EnterWhileLoop = true ;
 				char TrainerGender = 0 ;
-				while(Enter)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Trainer's Gender 'F' for female: ");
 					TrainerGender = input.next().charAt(0);
 				if ( TrainerGender != 'F' && TrainerGender != 'f')
                     throw new InvalidGenderException();
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidGenderException ex )
 				{
@@ -236,16 +235,16 @@ public class GymManagementSystem {
 				
 
 				
-				enter = true ;
+				EnterWhileLoop = true ;
 				int TrainerID = 0; 
-				while(enter)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Trainer's ID: ");
 					TrainerID = input.nextInt(); 
 				if (TrainerID <= 0) 
                     throw new InvalidIdException();
-				enter = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -265,16 +264,16 @@ public class GymManagementSystem {
 				
 			case 5: 
 				System.out.println("------------ Remove Trainer ------------");
-				boolean enterWhileloop = true ;
+				EnterWhileLoop = true ;
 				int TrainerId = 0; 
-				while(enterWhileloop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Trainer's ID: ");
 					TrainerId= input.nextInt();
 				if (TrainerId <= 0) 
                     throw new InvalidIdException();
-				enterWhileloop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -292,16 +291,16 @@ public class GymManagementSystem {
 				
 			case 6:
 				System.out.println("------------ Search Trainer ------------");
-				boolean EnterWhileloop = true ;
+				EnterWhileLoop = true ;
 				int searchTrainerID = 0; 
-				while(EnterWhileloop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Trainer's ID: ");
 					searchTrainerID= input.nextInt();
 				if (searchTrainerID <= 0) 
                     throw new InvalidIdException();
-				EnterWhileloop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -326,16 +325,16 @@ public class GymManagementSystem {
 				System.out.print("Enter Employee's Name: ");
 				String EmployeeName= input.next() ;
 				
-				boolean EnterWhile = true ;
+				EnterWhileLoop = true ;
 				int EmployeeAge = 0 ;
-				while(EnterWhile)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Employee's Age: ");
 					EmployeeAge = input.nextInt();
 				if ( EmployeeAge < 21 )
                     throw new InvalidAgeException("Age must be 21 years and older");
-				EnterWhile = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidAgeException ex )
 				{
@@ -343,16 +342,16 @@ public class GymManagementSystem {
 				}
 				}
 
-				EnterWhile = true ;
+				EnterWhileLoop = true ;
 				char EmployeeGender = 0 ;
-				while(EnterWhile)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Employee's Gender 'F' for female: ");
 					EmployeeGender = input.next().charAt(0);
 				if ( EmployeeGender != 'F' &&  EmployeeGender != 'f')
                     throw new InvalidGenderException();
-				EnterWhile = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidAgeException ex )
 				{
@@ -360,16 +359,16 @@ public class GymManagementSystem {
 				}
 				}
 
-				EnterWhile = true ;
+				EnterWhileLoop = true ;
 				int EmployeeID = 0; 
-				while(EnterWhile)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Employee's ID: ");
 					EmployeeID= input.nextInt(); 
 				if (EmployeeID <= 0) 
                     throw new InvalidIdException();
-				EnterWhile = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -389,16 +388,16 @@ public class GymManagementSystem {
 				
 			case 8: 
 				System.out.println("------------ Remove Employee ------------");
-				boolean Enterwhile = true ;
+				EnterWhileLoop = true ;
 				int EmployeeId = 0; 
-				while(Enterwhile)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Employee's ID: ");
 					EmployeeId = input.nextInt(); 
 				if (EmployeeId <= 0) 
                     throw new InvalidIdException();
-				Enterwhile = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -415,16 +414,16 @@ public class GymManagementSystem {
 			
 			case 9:
 				System.out.println("------------ Search Employee ------------");
-				boolean EnterwhileLoop = true ;
+				EnterWhileLoop = true ;
 				int searchEmployeeID = 0; 
-				while(EnterwhileLoop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Employee's ID: ");
 					searchEmployeeID = input.nextInt();
 				if (searchEmployeeID <= 0) 
                     throw new InvalidIdException();
-				EnterwhileLoop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -447,16 +446,16 @@ public class GymManagementSystem {
 				System.out.println("------------ Add Equipment ------------");
 				System.out.print("Enter equipment name: " ) ;
 				String EquipmentName = input.next(); 
-				boolean enterwhile = true ;
+				EnterWhileLoop = true ;
 				int EquipmentID = 0; 
-				while(enterwhile)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter equipment ID: " ) ;
 					EquipmentID = input.nextInt(); 
 				if (EquipmentID <= 0) 
                     throw new InvalidIdException();
-				enterwhile = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
@@ -476,16 +475,16 @@ public class GymManagementSystem {
 				
 			case 11:
 				System.out.println("------------ Remove Equipment ------------");
-				boolean whileloop = true ;
+				EnterWhileLoop = true ;
 				int EquipmentId = 0 ;
-				while(whileloop)
+				while(EnterWhileLoop)
 				{
 				try{
 					System.out.print("Enter Equipment ID: ");
 					EquipmentId= input.nextInt();
 				if (EquipmentId <= 0) 
                     throw new InvalidIdException();
-				whileloop = false;
+				EnterWhileLoop = false;
 				}
 				catch(InvalidIdException ex )
 				{
