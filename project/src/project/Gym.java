@@ -1,8 +1,6 @@
 package project;
 
-import java.io.Serializable;
-
-public class Gym implements Serializable{
+public class Gym {
 	
         private String Name;
 	private String Location;
@@ -26,22 +24,18 @@ public boolean addPerson (Person person) {
 if(NumOfPeople<peopleList.length) {
 
 	if(person instanceof Member) {
-	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 16) {
 	        peopleList[NumOfPeople++] = new Member(person.getName(), person.getAge(), person.getGender(), person.getID(), ((Member)person).getMembershipType(), ((Member)person).getGoal());
 	        return true;
-	    }
 	}
 	else if(person instanceof Trainer) {
-	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 23 && ((Trainer)person).getExperienceYears()>=2) {
+	    if(((Trainer)person).getExperienceYears()>=2) {
 	        peopleList[NumOfPeople++] = new Trainer(person.getName(), person.getAge(), person.getGender(), person.getID(), ((Trainer)person).getExperienceYears());
 	        return true;
 	    }
 	}
 	else if(person instanceof Employee) {
-	    if((person.getGender() == 'F' || person.getGender() == 'f') && person.getAge() >= 21) {
 	        peopleList[NumOfPeople++] = new Employee(person.getName(), person.getAge(), person.getGender(), ((Employee)person).getworkHours(), person.getID());
 	        return true;
-	    }
 	}
 }
 return false; 
@@ -209,5 +203,5 @@ public boolean searchEquipmentByType (String type) {
 		  for(int i=0 ; i< NumOfEquipment ; i++)
 		   System.out.print(equipmentList[i]);
 
-		   }        
+		   }
 }
